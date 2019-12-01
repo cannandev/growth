@@ -1147,6 +1147,7 @@ header {
 
 /* 1.6 Client */
 .client-area {
+  background: #0c143a;
   padding: 110px 0 80px;
 }
 
