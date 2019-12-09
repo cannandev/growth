@@ -3,7 +3,10 @@ layout: post
 title:  "Welcome to Jekyll!"
 date:   2019-12-02 19:26:01 -0500
 description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quae cum dixisset paulumque institisset, Quid est? Tibi hoc incredibile, quod beatissimum."
+background: "https://picsum.photos/1600/700"
+thumbnail: "https://picsum.photos/350/250"
 categories: jekyll update
+
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 

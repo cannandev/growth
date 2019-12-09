@@ -33,7 +33,7 @@ plugins:
   - jekyll-feed
 
 # Link formats
-permalink: /blog/:year/:month/:day/:title
+permalink: /blog/:title
 
 # Sass settings
 sass:
