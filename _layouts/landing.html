@@ -1,23 +1,32 @@
 {% include header.html %}
+<section class="landing-hero-area" style="background-image: url('{{ page.background }}')">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-9 offset-lg-1 col-12">
+        <div class="innerpage-hero-content">
+          <h1 class="title">{{ page.title }}</h1>
+          <p class="text">{{ page.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 <section class="page-blog-area">
   <div class="container">
     <div class="row">
-      <h1>{{ page.title }}</h1>
-      <p>{{ page.description }}</p>
-      {{ content }}
-    </div>
-    <div class="row">
-      <div class="col-lg-8 col-12">
+      <div class="col-12">
         <div class="page-all-blog">
-          <div class="row justify-content-center">
+          <div class="row">
             {% for post in site.posts %}
-            <div class="col-lg-6 col-sm-6 col-12">
+            <div class="col-lg-4 col-sm-6 col-12">
               <div class="single-related-article">
                 <div class="img">
-                  <a href="{{ post.url }}"><img src="img/single-blog/related-1.png" alt="{{ post.title }}"></a>
+                  <a href="{{ post.url }}">
+                    <img src="{{ post.thumbnail }}" alt="{{ post.title }}">
+                  </a>
                 </div>
                 <div class="content">
-                  <p class="date">{{ post.date }}</p>
+                  <p class="date">{{ post.date | date: "%b %d, %Y" }}</p>
                   <h4 class="title">{{ post.title }}</h4>
                   <p class="text">{{ post.description }}</p>
                 </div>

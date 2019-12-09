@@ -1,9 +1,15 @@
 {% include header.html %}
-<section class="innerpage-hero-area">
+<section class="innerpage-hero-area" style="background-image: url('{{ page.background }}')">
   <div class="container">
-    <h1>{{ page.title }}</h1>
-    <p>{{ page.description }}</p>
-    <span>{{ page.categories }}</span>
+    <div class="row">
+      <div class="col-lg-9 offset-lg-1 col-12">
+        <div class="innerpage-hero-content">
+          <h1 class="title">{{ page.title }}</h1>
+          <p class="text">{{ page.description }}</p>
+          <span>{{ page.categories }}</span>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 <section class="single-blog-post-area">
