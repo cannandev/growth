@@ -14,7 +14,9 @@
     <div class="single-project">
       <div class="img"><img src="{{ post.thumbnail }}" alt=""></div>
       <div class="content">
-        <p class="type">{{ post.categories }}</p>
+        <p class="type">
+          {% assign categories = post.categories | join: ", " %} {{ categories }}
+        </p>
         <h2 class="title">{{ post.title }}</h2>
         <p class="text">{{ post.description }}</p>
         <a class="read btn-style-1" href="{{ post.url }}">READ MORE</a>
