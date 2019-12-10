@@ -15,7 +15,7 @@
       <div class="img"><img src="{{ post.thumbnail }}" alt=""></div>
       <div class="content">
         <p class="type">
-          {% assign categories = post.categories | join: ", " %} {{ categories }}
+          {% post.categories | join: ", " %}
         </p>
         <h2 class="title">{{ post.title }}</h2>
         <p class="text">{{ post.description }}</p>
