@@ -1461,6 +1461,7 @@ footer {
     letter-spacing: 0;
     padding: 7px 90px 17px;
   }
+  p,
   .text {
     font-size: 16px;
     line-height: 30px;
@@ -1481,6 +1482,7 @@ footer {
     font-size: 36px;
     margin: 0 0 48px;
   }
+  h2,
   .subtitle {
     font-size: 24px;
     line-height: 28px;
@@ -2591,6 +2593,32 @@ footer {
     }
     .link {
       opacity: 1;
+    }
+  }
+}
+
+.project-carousel {
+  .owl-nav {
+    position: absolute;
+    right: 10%;
+    top: -96px;
+    border: 1px solid $link-color;
+    @include border-radius(3px);
+    div {
+      display: inline-block;
+      background: #2C304A;
+      height: 44px;
+      width: 44px;
+      text-align: center;
+      line-height: 44px;
+      font-size: 14px;
+      @include transition(0.3s);
+      &:hover {
+        background: $link-color;
+      }
+    }
+    .owl-next {
+      border-left: 1px solid $link-color;
     }
   }
 }

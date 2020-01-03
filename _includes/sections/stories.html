@@ -15,10 +15,10 @@
       <div class="img"><img src="{{ post.thumbnail }}" alt=""></div>
       <div class="content">
         <p class="type">
-          {% post.categories | join: ", " %}
+          {{ post.tags | join: ", " }}
         </p>
         <h2 class="title">{{ post.title }}</h2>
-        <p class="text">{{ post.description }}</p>
+        <p class="text">{{ post.excerpt }}</p>
         <a class="read btn-style-1" href="{{ post.url }}">READ MORE</a>
       </div>
     </div>
