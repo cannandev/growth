@@ -311,31 +311,31 @@ small {
 
 blockquote {
   border-left: 0 none;
-  font-family: $primary-font;
+  font-family: $title-font;
   margin: 10px 0;
-  padding-left: 40px;
+  padding-left: 76px;
   position: relative;
 }
 
 blockquote::before {
   color: $light-color;
-  content: "";
-  font-family: "Font Awesome 5 Free";
+  content: "\f10d";
+  font-family: "Font Awesome 5 Pro";
   font-weight: 900;
-  font-size: 36px;
+  font-size: 50px;
+  position: absolute;
+  top: 20px;
   left: 20px;
   line-height: 0;
   margin: 0;
-  opacity: 0.5;
-  position: absolute;
-  top: 20px;
+  opacity: 0.3;
 }
 
 blockquote p {
   font-style: italic;
   padding: 0;
-  font-size: 18px;
   line-height: 36px;
+  font-family: inherit;
 }
 
 blockquote cite {
@@ -1474,25 +1474,13 @@ footer {
 .sbpa-content {
   a {
     color: $link-color;
-    font-size: 14px;
     &:hover {
       color: $hover-color;
     }
   }
-  blockquote {
-    &::before {
-      display: none;
-    }
-    font-size: 20px;
-    line-height: 32px;
-    font-weight: 500;
-    font-style: italic;
-    letter-spacing: 0;
-    padding: 7px 90px 17px;
-  }
   p,
   .text {
-    font-size: 16px;
+    font-size: 20px;
     line-height: 30px;
     margin: 0 0 47px;
   }
@@ -1511,6 +1499,9 @@ footer {
     font-size: 36px;
     margin: 0 0 48px;
   }
+  h1 {
+    margin-bottom: 40px;
+  }
   h2,
   .subtitle {
     font-size: 24px;
@@ -1525,6 +1516,36 @@ footer {
       line-height: 30px;
       letter-spacing: 0;
     }
+  }
+  h3 {
+    border: 1px solid $light-color;
+    padding: 1em;
+    border-radius: 5px;
+  }
+  h3+p {
+    margin-top: 40px;
+  }
+  h3+p>em {
+    position: relative;
+    font-family: $title-font;
+    font-size: 20px;
+    font-style: normal;
+    &::before {
+      content: "\f530";
+      position: absolute;
+      top: 3rem;
+      left: -1.5em;
+      line-height: 0;
+      margin: 0;
+      opacity: 0.5;
+      color: $link-color;
+      font-family: "Font Awesome 5 Pro";
+      font-size: 50px;
+    }
+  }
+  h3~p,
+  h3~ol {
+    padding: 0 4em;
   }
 }
 

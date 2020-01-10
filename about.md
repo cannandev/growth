@@ -1,6 +1,7 @@
 ---
 layout: post
 title: About
+background: "/assets/images/headers/claire-eyes-995A3478.jpg"
 permalink: /about/
 ---
 <h1 class="title">A little about me.</h1>
