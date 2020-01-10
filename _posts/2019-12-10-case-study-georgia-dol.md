@@ -1,8 +1,6 @@
 ---
 layout: post
 title:  "Case Study: Georgia Department of Labor UI Services"
-background: "/assets/headers/ian-schneider--IIluzOp4yA-unsplash.jpg"
-thumbnail: "/assets/headers/ian-schneider--IIluzOp4yA-unsplash.jpg"
 photo_atty: "Photo by Ian Schneider on Unsplash"
 tags: [ux, ui]
 category: ["Case Study"]
