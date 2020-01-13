@@ -1,101 +1,109 @@
 ---
 layout: post
-title:  "Case Study: Drupal User Interface for Third & Grove Decoupled Gatsby Site"
+title:  "Case Study: Building a Drupal UI for Third & Grove Decoupled Gatsby Site"
 background: "/assets/images/headers/michael-emono-oGPOVUbrW8Y-unsplash.jpg"
 thumbnail: "/assets/images/headers/michael-emono-oGPOVUbrW8Y-unsplas-thumb.jpg"
 photo_atty: "Photo by Michael Emono on Unsplash"
 tags: [ui, architecture]
 category: [Case Study]
 ---
-Provide a user interface for a Gatsby driven website [a PWA (Progressive Web App) generator].
+Third and Grove is a 100% distributed digital agency with employees across the United States.  Keep reading to understand how we accomplished a complete rebrand with their favorite backend and a modern frontend.
 
 # Overview
+_headline: Third and Grove chose to build their rebranded site on a [headless](https://dri.es/how-to-decouple-drupal-in-2019) Drupal 8 platform, using the static site generator Gatsby behind the scenes, combining the best of both familiar and the latest technology._
 
-As a 100% distributed digital agency with employees across the United States, Third and Grove (TAG)’s mission is to be the most innovative agency in the world through modern digital design, awesome engineering, being good citizens, and building solutions for our clients as if we were building them for ourselves. Modern technology is moving toward faster apps. Static site generators such as Gatsby and Javascript based application frameworks such as ReactJS. To showcase what they could do for clients, TAG wanted to build their own website on this platform.
+Third and Grove's mission is to be "the most innovative agency in the world through modern digital design, awesome engineering, and building solutions for our clients as if we were building them for ourselves." So when they decided to rebrand in the summer of 2019, they had no doubt they would use the technologies they were already good at. But they also wanted showcase their ability to master cutting-edge tech. Being a Drupal shop, they would use Drupal to manage their rebranded content. But instead of Drupal's traditional templating layer system, they decided to use Gatsby - the free and open-source ReactJS framework for generating lightning-fast, progressive web apps.
 
 # Problem Statement
 
-Provide a user interface for a Gatsby driven website [a PWA (Progressive Web App) generator]. Internal stakeholders should be able to change the frontend without requesting  a developer to change code. Use drupal fields to set values read by ReactJS and rendered as a Gatsby project. As a Drupal shop, TAG decided to use Drupal to solve this problem. What should the interface look like? It needed to be 1) simple enough for any of the users and 2) flexible enough to get all data needed by developers.
-#Users & Audience
-Only TAG employees (internal stakeholders) would see the user interface. But their roles and needs varied:
-Project managers - Add new case studies, manage home page
-SEO, SEM strategists - Add accurate titles and meta data for each page
-Blog contributors - Add/Edit Insights content
-CEO - Add/Edit Insights content and pretty much anything he wants
-Creative director and visual designer - curate images and background images. Usability test for pixel perfect replication of their design.
-Hiring managers - Update available roles and their descriptions
+_headline: Internal stakeholders needed an easy and quick user interface to add and edit site content. Developers needed to route the content to Gatsby for rendering._
+
+![Thirdandgrove.com homepage](/assets/images/projects/tag-header-home.png)
+
+Gatsby loads only the critical HTML, CSS, data, and JavaScript so your site loads as fast as possible. Once loaded, Gatsby prefetches resources for other pages so clicking around the site feels incredibly fast. In our case, those resources mostly came from Drupal content. But what would the user interface look like to capture content? How do you build an interface that works for everyone? Here come UX principles to the rescue.
+
+# Users & Audience
+_headline: Only internal stakeholders would see the content management UI. After reviewing user needs, two main personas became clear._
+
+![Thirdandgrove.com User Personas](/assets/images/projects/tag-user-personas.png)
+
+Only internal stakeholders (TAG employees) would see the content management user interface via a separate URL. But their roles and needs varied. I created a matrix of users based on their login permissions.
+
+|Role|Needs|
+|----|----|
+|Project manager|Add new case studies, manage home page|
+|SEO/SEM strategists|Add accurate titles and meta-data for each page|
+|Blog contributors|Write Blog content|
+|CEO|Edit pretty much anything he wants|
+|Visual designer|curate all images and background colors|
+|Hiring managers|Update available roles and their descriptions|
+|Frontend developer|Render dynamic content exactly as the designs|
+|Backend develoer|Connect Drupal fields to React components|
+
+Using this matrix, I could narrow down users to two personas: Andrew (Project Manager) and Maxine (Developer) (see above image).
+
+
+**Andrew** needs to create pages and edit content without requesting a developer to change code.
+
+**Maxine** needs a flexible UI to capture all possible data points read by React components.
 
 # Roles & Responsibilities
-Frontend developer (1 of 2) joining the project after most of the architecture had already been built. and quality assurance tester. React Developer. 1 Drupal Architect and 1 Drupal developer. 1 Visual Designer.
-Learned and wrote ReactJS components for thirdandgrove.com, the agency’s first lightning-fast decoupled site with Drupal and Gatsby. Used Emotion CSS-in-JavaScript to style components and built a modular user interface. Performed design critiques of Sketch files, rendering a more flexible Drupal user interface.
+_headline:Remote Frontend developer and usability tester on TAG's engineering team. New to React and Gatsby._
+At the time, I was the Senior Frontend Developer of TAG and was asked to jump onto this project. I joined after most of the architecture had already been built. The previous frontend developer had done a great job using [Emotion](https://emotion.sh/docs/introduction) to create a basic design system. I focused on building the remaining React components we needed and styling them according to our designs, which had changed considerably over time. I worked in tandem with four other developers, including a React Developer, Drupal Architect and Drupal developer.
 
-As frontend developer we do a lot of UX research without labeling as such...interviewing visual designers to understand what he had in mind when he created this mock, interview clients/stakeholders to understand what problem they’re trying to solve, usability test content management admins to see what they’re expecting once they click the update button. Read and understand sitemaps, user flows and wireframes. Request A/B tests and SEO results to understand which browsers versions and mobile devices we need to build for/test. Review quality assurance tests and see where we can improve accessibility and the user interface. Interview backend developers to see what data is available to frontend and how to access it. Most of these conversations on slack and emails.
+Read my blog post about [why frontend developers make great UXers](blog/why-frontend-devs-make-great-uxers).
 
 # Scope & Constraints
 
-Design handed to us as most projects in digital agencies are, without wireframes or prototypes. Requested invision with code (uploaded sketch files).
-Had to look flawless on mobile, IE11, Edge and modern browsers.
-Tight launch schedule. No time for user personas, user research, usability testing.
-Limited knowledge of React, Gatsby or (what’s the CI we used?)
-What the CEO wants goes.
-Accessibility concerns addressed as an afterthought. Background colors not A11y compliant and no arrows on slideshows, confusing drag capability on desktop, designer won argument.
-My time was up with company, so my proposed changes for future iterations were not implemented (see section).
-Preview not working yet. Would have been great. Disabled when I left.
+The rebranded site had to launch within a few weeks, which left no time for proper user experience research methods, wireframes or prototypes. I was handed final designs in Invision, which had considerably changed since the site architecture began. I had to work quickly to understand the new designs, build the new components and style them to pixel perfection. The responsive site had to look flawless on mobile, IE11, Edge and other modern browsers.
+Meanwhile, I had limited knowledge of React, Gatsby and [Netlify](https://www.netlify.com/). Fortunately, I was eager to learn and had a great React mentor already on the team.
 
 # Process
 
 Tools <i class="far fa-tools"></i> Invision, Sketch, ReactJS, Gatsby, CSS, Emotion, GraphQL, CBT.
 
 ### 1. Empathize
-_Looking at the designs, we needed more content components to address the needs of both developers and content managers, which the Drupal user interface did not yet show._
+_Listening to content managers during standups and reading their feedback in slack discussions, I understood the need for flexibility in every component we would build for the two personas._
 
-Our scope did not allow time to create in-depth user personas. However, I had created  a user matrix (see Users & Audience section) of internal stakeholders to know and understand the users and their needs.
-As a developer, I was used to following a component driven strategy for coding standards, and encouraged this as a best practice for the team of developers[types].  It was easy to follow this methodology building React components, since existing files were already organized this way.
-But there was another benefit for stakeholders. Clearly named components would allow content managers[types] to quickly add content to different pages. If we could keep the components consistent across page layouts, we could build a seamless experience for the content managers. We wanted to create as few components as possible to not overwhelm the user, while still giving the content manager flexibility.
+As a developer, I was used to following a component-driven strategy for coding standards, and encouraged this as a best practice for the developers.  It was easy to follow this methodology building React components, since existing files were already organized this way.
+
+However, there was another benefit for stakeholders. Clearly named components would allow content managers to quickly add content to different pages. If we could keep the components consistent across page layouts, we could build a seamless experience for the content managers. We wanted to create as few components as possible to not overwhelm the user, while still giving the content manager flexibility.
 
 ### 2. Research
-_Interviews  with internal stakeholders revealed that certain components needed to be either created or enhanced with new fields to increase content flexibility,  while still reaching the visual designer’s goals and capture enough data for the developers._
+_**Interviews** with internal stakeholders revealed that we needed to 1) create two new components and 2) enhance existing components with new fields to increase content flexibility. We fine-tuned the fields after running local **usability tests.**_
 
-Visual designers often create designs as entire pages. Instead, I had to review each Invision mockup as a page of content components:
-Header - One header component used across different page templates. Should be agnostic of which page it’s on. How account for design differences across templates? Design differences on mobile? [screenshots of frontend]
-Full width 2-col text with image - Ability to swap image and text position and set background color [screenshots of frontend]
-Text with Image - canned after reviewing new design and broken into two separate components. [screenshots of frontend]
-Legal page - look considerably different on mobile [screenshots of frontend]
-Insights carousel - add options for background color and title [screenshots of frontend]
-Small Quote (partners), Big quote (work,  insights) - look considerably different on mobile
 
 ### 3. Design
-_Mockups of all pages were already designed by the time the frontend team was brought onboard._
-1. Homepage
-1. Partner
-1. Work landing page
-1. Case Studies
-1. Blog landing page
-1. Insights (blog pages)
-1. Contact
-1. About Us
-1. Legal
+_Identified reusable components from the Invision designs and worked with the visual designer to resolve discrepancies._
+
+Visual designers often create designs as entire pages. Developers (should) break up those designs into modular puzzle pieces that can be reused throughout an application, perhaps in a different order or a different layout. After studying the new designs, I came up with the new components we should build and fields to add to make existing components more flexible. One of those components was the Header.
+
+![Thirdandgrove.com header component on a partner page](/assets/images/projects/tag-header-partner-gatsby.png)
+![Thirdandgrove.com header component on a case study page](/assets/images/projects/tag-header-work.png)
+![Thirdandgrove.com header component on a blog page](/assets/images/projects/tag-header-blog.png)
+![Thirdandgrove.com header component on blog landing page](/assets/images/projects/tag-header-blog-landing.png)
+
+Header - One header component used across different page templates. Should be agnostic of which page it’s on.
+There were some discrepancies which needed addressing. Ability to choose a background color, enter title, label = date and author for blogs, custom for other pages, option to hide label on mobile.
+
+Discrepancies - For example, the title text width smaller breaking into three lines on some pages than others. Needed to add this adjustment to user interface. Not all changes were added to interface because of project scope. [See full proposed UI]
+
+Other components: Text, Image, Quote, Insights Carousel, etc.
 
 ### 4. Implement
 _We changed the site architecture to add the new fields and components in the Drupal user interface, connect them to React via GraphQL queries(?), and styled as Emotion thingies._
 
-Build components
-Header: Options added. [screenshot of code and UI]
-Page label
-Date/Author default for blog pages
-Hidden on mobile
-Title
-Background color
-Height
-Hero Image
-Meta data
-Full width 2-col text with image - add reverse option [screenshot of UI]
-Text - WYSIWYG. Mobile settings and desktop settings - padding, margins, text sizes  [screenshot of code and UI]. DropCap? Explain easier to add to insights - only place used.
+Because of limited scope, only the following were implemented into the drupal user interface for the site launch:
+Header
+Text - WYSIWYG. Mobile settings and desktop settings - padding, margins, text sizes  [screenshot of code and UI].
 Image - [screenshot of code and UI]
-Legal page -  [screenshots of code]
 Insights carousel - add options for background color and title [screenshots of frontend]
-Small Quote (partners), Big quote (work,  insights) - look considerably different on mobile
-Relate new components and fields to backend developers (both drupal and react devs) to build out user interface in drupal.
+Work Slider -
+
+The rest settings were left in code. I did wireframes for a future iteration of TAG. See pdf.
+
+Use drupal fields to set content values. Gatsby ingest content.
+Relate new components and fields to backend developers (both drupal and react devs) to build out user interface in drupal. This works by matching content types in Drupal to React components.
 Work with react developers to connect the UI components to in React.
 Style components for responsive layouts (mobile, tablet and desktop breakpoints[]). Collaborate with frontend devs. New way of styling for me. CSS-in-JS with Emotion. Use JS maps and arrays and vars as much as possible. Commit to Github.
 
@@ -106,13 +114,6 @@ Use GraphQL UI to validate data.
 Test layout in CBT.
 Launch live.
 
-## Proposed changes not implemented - see pdf
-User personas
-Header component
-Quote
-Images (Media module to manage media assets)
-Work carousel collage picker (A, B, C)
-
 # Results & Lessons Learned
 _Launched on (date). Resulted in a 48% increase in account registrations and 38% increase in month over month revenue._
 
@@ -121,3 +122,8 @@ Done different: Utilize Drupal’s own responsive image handling instead of rely
 Brought more accessibility awareness to the forefront.
 Need to convince project managers and designers to see project tasks as components, not pages.
 AirBNB way of styling React components.
+Accessibility concerns addressed as an afterthought. Background colors not A11y compliant and no arrows on slideshows, confusing drag capability on desktop, designer won argument.
+My time was up with company, so my proposed changes for future iterations were not implemented (see section).
+Preview not working yet. Would have been great. Disabled when I left.
+Only had time to put into drupal header options.
+Use Media module to manage media assets instead of image upload.
