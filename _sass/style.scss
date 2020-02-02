@@ -1218,20 +1218,20 @@ header {
   img {
     margin: auto;
     border-radius: 5px;
+    z-index: 1;
   }
-  >div {
+  div {
     position: absolute;
-    display: none;
     left: 50%;
     top: 50%;
     width: 75%;
     transform: translate(-50%, -50%);
-  }
-  &:hover>div {
-    display: block;
-  }
-  a {
     z-index: 1000;
+  }
+  a::before,
+  div {
+    transition: all 0.4s ease-in-out;
+    opacity: 0;
   }
   a::before {
     content: '';
@@ -1244,9 +1244,9 @@ header {
     background: transparentize($color: #0c143a, $amount: .10);
     border: 1px solid $link-color;
     border-radius: 5px;
-    transition: all 0.2s ease-in-out;
   }
-  a:hover::before {
+  a:hover::before,
+  a:hover div {
     opacity: 1;
   }
 }
