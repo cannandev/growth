@@ -2,8 +2,8 @@ $primary-font: 'HK Grotesk Legacy';
 $title-font: 'Playfair Display',
 serif;
 $light-color: #ffffff;
-$dark-color: #000000;
-$bg-color: #030925;
+$dark-color: #030925;
+$bg-color: $light-color;
 $primary-bg: lighten($bg-color, 0.75);
 $title-color: #ffffff;
 $paragraph-color: #ffffff;
