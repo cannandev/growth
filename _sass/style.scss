@@ -176,7 +176,7 @@ body {
   font-weight: normal;
   font-size: 15px;
   letter-spacing: 1.5px;
-  color: $light-color;
+  color: $dark-color;
   line-height: 30px;
   -webkit-font-smoothing: antialiased;
   /* Fix for webkit rendering */
@@ -223,7 +223,7 @@ h6 {
   margin: 0;
   font-family: $title-font;
   font-weight: 700;
-  color: $light-color;
+  color: $dark-color;
   letter-spacing: 0;
 }
 
@@ -273,7 +273,7 @@ h6 {
 
 p {
   font-family: $primary-font;
-  color: $light-color;
+  color: $dark-color;
   font-size: 16px;
   font-weight: normal;
   letter-spacing: 0;
@@ -318,7 +318,7 @@ blockquote {
 }
 
 blockquote::before {
-  color: $light-color;
+  color: $dark-color;
   content: "\f10d";
   font-family: "Font Awesome 5 Pro";
   font-weight: 900;
@@ -359,7 +359,7 @@ blockquote cite a:visited {
 /* abbreviations */
 
 abbr {
-  color: $light-color;
+  color: $dark-color;
   font-weight: 700;
   font-variant: small-caps;
   text-transform: lowercase;
@@ -379,7 +379,7 @@ a:visited {
   font-family: $primary-font;
   font-weight: normal;
   font-size: inherit;
-  color: $light-color;
+  color: $dark-color;
   transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
@@ -559,7 +559,7 @@ dd {
   padding: 10px 24px;
   &:hover {
     background: $link-color;
-    color: $light-color;
+    color: $dark-color;
   }
 }
 
@@ -642,7 +642,7 @@ header {
     li {
       text-align: left;
       a {
-        color: $light-color;
+        color: $dark-color;
         font-size: 14px;
         line-height: 18px;
         font-weight: 600;
@@ -747,13 +747,15 @@ header {
     }
   }
   .hero-banner {
+    &::before {
+      @include headerGradient($light-color,
+      0);
+    }
     position: absolute;
-    text-align: right;
     bottom: 0;
     right: 0;
     img {
       margin: auto;
-      max-height: 770px;
     }
   }
 }
@@ -761,7 +763,7 @@ header {
 .hero-content {
   .intro {
     font-family: $primary-font;
-    color: $link-color;
+    color: $intro-color;
     font-size: 40px;
     line-height: 42px;
     font-weight: 500;
@@ -777,6 +779,14 @@ header {
     line-height: 32px;
     font-weight: 500;
     margin: 46px 0 0;
+  }
+}
+
+.about-area {
+  padding: 120px 0 60px;
+  p {
+    font-size: 24px;
+    line-height: 2;
   }
 }
 
@@ -1023,7 +1033,7 @@ header {
 .section-title {
   margin: 0 0 50px;
   .intro {
-    color: $link-color;
+    color: $dark-color;
     text-transform: uppercase;
     line-height: 18px;
     font-weight: 600;
@@ -1044,11 +1054,11 @@ header {
 }
 
 .single-project {
-  background: #313552;
+  background-color: rgba($dark-color, 0.1);
   border-bottom: 1px solid $link-color;
+  max-width: 435px;
   @include transition(0.3s);
   @include border-radius(5px);
-  max-width: 435px;
   .img {
     img {
       @include border-radius(5px);
@@ -1058,11 +1068,15 @@ header {
   .content {
     padding: 40px 30px 50px;
     .type {
+      background-color: $dark-color;
       color: $link-color;
       font-size: 12px;
       line-height: 16px;
       font-weight: 500;
       text-transform: uppercase;
+      display: inline-block;
+      padding: 5px 10px;
+      @include border-radius(5px);
     }
     .title {
       font-size: 24px;
@@ -1086,11 +1100,10 @@ header {
 
 .testimonial-area {
   background: $light-color;
-  padding: 100px 0 110px;
+  padding: 140px 0 110px;
 }
 
 .single-testimonial {
-  background: #2C304A;
   padding: 30px 40px 50px;
   border: 1px solid $link-color;
   @include border-radius(5px);
@@ -1148,7 +1161,7 @@ header {
     @include border-radius(3px);
     div {
       display: inline-block;
-      background: #2C304A;
+      background: $light-color;
       height: 44px;
       width: 44px;
       text-align: center;
@@ -1187,12 +1200,11 @@ header {
         border: 0;
         margin: 0;
         padding: 0;
-        font-size: 14px;
         line-height: 18px;
-        font-weight: 500;
+        font-weight: bold;
         text-transform: uppercase;
         letter-spacing: 0;
-        color: $light-color;
+        color: $dark-color;
         .icon {
           opacity: 0;
           margin-left: 11px;
@@ -1227,6 +1239,10 @@ header {
     width: 75%;
     transform: translate(-50%, -50%);
     z-index: 1000;
+    h4,
+    p {
+      color: $light-color;
+    }
   }
   a::before,
   div {
@@ -1323,6 +1339,7 @@ footer {
   text-align: center;
   padding: 0;
   .title {
+    color: $light-color;
     font-size: 40px;
     line-height: 44px;
     margin-bottom: 20px;
@@ -1332,6 +1349,13 @@ footer {
 .f-chat {
   text-align: right;
   padding: 0 0 30px;
+  letter-spacing: 5px;
+  a {
+    color: $light-color;
+    &:hover {
+      color: $link-color;
+    }
+  }
   i {
     font-size: 32px;
   }
@@ -1354,6 +1378,7 @@ footer {
         margin-right: 0;
       }
       a {
+        color: $light-color;
         display: block;
         letter-spacing: 0;
         font-size: 12px;
@@ -1368,6 +1393,7 @@ footer {
 .footer-copyright {
   text-align: center;
   .copyright {
+    color: $light-color;
     font-size: 12px;
     line-height: 16px;
     font-weight: 500;
@@ -1405,13 +1431,8 @@ footer {
   position: relative;
   padding: 251px 0 247px;
   &::before {
-    background-image: linear-gradient(180deg, rgba($primary-bg, .5) 0, transparent);
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
+    @include headerGradient($dark-color,
+    180deg);
   }
   .iha-meta {
     background: rgba(112, 112, 112, 0.2);
@@ -1601,7 +1622,7 @@ footer {
   input[type="text"] {
     @include border-radius(3px);
     border: 1px solid $light-color;
-    color: $light-color;
+    color: $dark-color;
     font-size: 16px;
     background: transparent;
     width: 100%;
@@ -1612,7 +1633,7 @@ footer {
   input[type="email"] {
     @include border-radius(3px);
     border: 1px solid $light-color;
-    color: $light-color;
+    color: $dark-color;
     font-size: 16px;
     background: transparent;
     width: 100%;
@@ -1623,7 +1644,7 @@ footer {
   textarea {
     @include border-radius(3px);
     border: 1px solid $light-color;
-    color: $light-color;
+    color: $dark-color;
     font-size: 16px;
     background: transparent;
     width: 100%;
@@ -1821,7 +1842,7 @@ footer {
         background: transparent none repeat scroll 0 0;
         border: 1px solid $light-color;
         @include border-radius(5px);
-        color: $light-color;
+        color: $dark-color;
         font-size: 16px;
         letter-spacing: 0;
         padding: 5px 56px 5px 20px;
@@ -1833,7 +1854,7 @@ footer {
         background: transparent none repeat scroll 0 0;
         border: 0 none;
         bottom: 3px;
-        color: $light-color;
+        color: $dark-color;
         cursor: pointer;
         outline: none;
         font-size: 18px;
@@ -1861,7 +1882,7 @@ footer {
         background: transparent none repeat scroll 0 0;
         border: 1px solid $light-color;
         @include border-radius(5px);
-        color: $light-color;
+        color: $dark-color;
         font-size: 16px;
         letter-spacing: 0;
         padding: 5px 56px 5px 20px;
@@ -1873,7 +1894,7 @@ footer {
         background: $link-color none repeat scroll 0 0;
         border: 0 none;
         bottom: 3px;
-        color: $light-color;
+        color: $dark-color;
         cursor: pointer;
         outline: none;
         font-size: 18px;
@@ -1905,7 +1926,7 @@ footer {
           text-transform: capitalize;
           &.active {
             background: transparent;
-            color: $light-color;
+            color: $dark-color;
           }
         }
       }
@@ -1939,7 +1960,7 @@ footer {
           font-size: 20px;
           line-height: 26px;
           &:hover {
-            color: $light-color;
+            color: $dark-color;
           }
         }
       }
@@ -2084,7 +2105,7 @@ footer {
       top: -12px;
     }
     .duration {
-      color: $light-color;
+      color: $dark-color;
       font-size: 13px;
       font-weight: 300;
     }
@@ -2222,7 +2243,7 @@ footer {
   input[type="text"] {
     @include border-radius(3px);
     border: 1px solid $light-color;
-    color: $light-color;
+    color: $dark-color;
     font-size: 16px;
     background: transparent;
     width: 100%;
@@ -2233,7 +2254,7 @@ footer {
   input[type="email"] {
     @include border-radius(3px);
     border: 1px solid $light-color;
-    color: $light-color;
+    color: $dark-color;
     font-size: 16px;
     background: transparent;
     width: 100%;
@@ -2244,7 +2265,7 @@ footer {
   textarea {
     @include border-radius(3px);
     border: 1px solid $light-color;
-    color: $light-color;
+    color: $dark-color;
     font-size: 16px;
     background: transparent;
     width: 100%;
@@ -2267,7 +2288,7 @@ footer {
     font-weight: 500;
     text-transform: uppercase;
     .icon {
-      color: $light-color;
+      color: $dark-color;
       margin-right: 10px;
     }
   }
@@ -2581,7 +2602,7 @@ footer {
     font-size: 14px;
     font-weight: 500;
     text-transform: uppercase;
-    color: $light-color;
+    color: $dark-color;
     background-color: #2c304a;
     padding: 15px 30px 15px 30px;
     margin: 0 -3px;
@@ -2628,7 +2649,7 @@ footer {
     text-align: center;
     @include border-radius(100px);
     background: $link-color;
-    color: $light-color;
+    color: $dark-color;
     @include transition(0.3s);
     opacity: 0;
   }
@@ -2656,7 +2677,6 @@ footer {
     @include border-radius(3px);
     div {
       display: inline-block;
-      background: #2C304A;
       height: 44px;
       width: 44px;
       text-align: center;
