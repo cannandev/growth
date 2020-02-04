@@ -4,36 +4,77 @@ title:  "Case Study: Building a Drupal UI for Third & Grove Decoupled Gatsby Sit
 background: "/assets/images/headers/michael-emono-oGPOVUbrW8Y-unsplash.jpg"
 thumbnail: "/assets/images/headers/michael-emono-oGPOVUbrW8Y-unsplas-thumb.jpg"
 photo_atty: "Photo by Michael Emono on Unsplash"
-tags: [ui, ux, architecture]
+tags: [ui, ia]
 category: [Case Study]
 ---
 Third and Grove is a 100% distributed digital agency with employees across the United States.  Keep reading to understand how we accomplished a complete rebrand with their favorite backend and a modern frontend.
 
 # Overview
-_headline: Third and Grove chose to build their rebranded site on a [headless](https://dri.es/how-to-decouple-drupal-in-2019) Drupal 8 platform, using the static site generator Gatsby behind the scenes, combining the best of both familiar and the latest technology._
+_Third and Grove chose to build their rebranded site on a [headless](https://dri.es/how-to-decouple-drupal-in-2019) Drupal 8 platform, using the static site generator Gatsby behind the scenes, combining the best of both familiar and the latest technology._
 
-Third and Grove's mission is to be "the most innovative agency in the world through modern digital design, awesome engineering, and building solutions for our clients as if we were building them for ourselves." So when they decided to rebrand in the summer of 2019, they had no doubt they would use the technologies they were already good at. But they also wanted showcase their ability to master cutting-edge tech. Being a Drupal shop, they would use Drupal to manage their rebranded content. But instead of Drupal's traditional templating layer system, they decided to use Gatsby - the free and open-source ReactJS framework for generating lightning-fast, progressive web apps.
+Third and Grove's mission is to be "the most innovative agency in the world through modern digital design, awesome engineering, and building solutions for our clients as if we were building them for ourselves."
+
+> "Slaying the mundane one pixel at a time." -- Third and Grove motto.
+
+So when they decided to rebrand in the summer of 2019, they had no doubt they would use the technologies they were already good at. But they also wanted showcase their ability to master cutting-edge tech. Being a Drupal shop, they would use Drupal to manage their rebranded content. But instead of Drupal's traditional templating layer system, they decided to use Gatsby - the free and open-source ReactJS framework for generating lightning-fast, progressive web apps.
 
 # Problem Statement
 
-_headline: Internal stakeholders needed an easy and quick user interface to add and edit site content. Developers needed to route the content to Gatsby for rendering._
+_Internal stakeholders needed an easy and quick user interface to add and edit site content. Developers needed to route the content to Gatsby for rendering._
 
 ![Thirdandgrove.com homepage](/assets/images/projects/tag-header-home.png)
 
 Gatsby loads only the critical HTML, CSS, data, and JavaScript so your site loads as fast as possible. Once loaded, Gatsby prefetches resources for other pages so clicking around the site feels incredibly fast. In our case, those resources mostly came from Drupal content. But what would the user interface look like to capture content? How do you build an interface that works for everyone? Here come UX principles to the rescue.
 
 # Users & Audience
-_headline: Only internal stakeholders would see the content management UI. After reviewing user needs, two main personas became clear._
+_Only internal stakeholders would see the content management UI. After reviewing user needs, two main personas became clear._
 
-##### <i class="far fa-hand-point-right"></i>Andrew #####
+##### Andrew #####
 ![Thirdandgrove.com User Personas](/assets/images/projects/tag-persona-andrew.png)
 
-##### <i class="far fa-hand-point-right"></i> Maxine #####
+##### Maxine #####
 ![Thirdandgrove.com User Personas](/assets/images/projects/tag-persona-maxine.png)
 
-Only internal stakeholders (TAG employees) would see the content management user interface via a separate URL. But their roles and needs varied. I created a matrix of users based on their login permissions.
 
-##### <i class="far fa-hand-point-right"></i> User Matrix #####
+# Roles & Responsibilities
+_Remote Frontend developer and usability tester on TAG's engineering team. New to React and Gatsby._
+
+I was the Senior Frontend Developer at TAG. I was asked to jump onto this project in early July 2019. I joined after most of the architecture had already been built. The previous frontend developer did great job using [Emotion](https://emotion.sh/docs/introduction) to create a basic design system.
+
+![Screenshot of 170 commits]
+
+I focused on building the remaining React components and styling them according to the latest designs. I worked in tandem with our React Developer, a Drupal Architect and a Drupal developer.
+
+# Scope & Constraints
+_The rebranded site had to launch within 6 weeks. Since our name was on the line, it had to look flawless. It had to look great on mobile, IE11, Edge and every modern browser. Proper user experience research methods, wireframes and prototypes were not scoped into the project. I did them on my own._
+
+[This project worked backward from a normal UX project.]
+
+I was handed final desktop and mobile designs in Invision, which had changed considerably since the site architecture began. I had to work quickly to understand the new designs, build the new components and style them to pixel perfection.
+
+Meanwhile, I had limited knowledge of React, Gatsby and [Netlify](https://www.netlify.com/). Fortunately, I was eager to learn and had a great React mentor already on the team.
+
+# Process
+
+Tools <i class="far fa-tools"></i> Invision, Sketch, ReactJS, Gatsby, CSS, Emotion, GraphQL, CBT.
+
+### 1. Research
+
+_**Interviews** with internal stakeholders revealed that we needed to 1) create two new components and 2) enhance existing components with new fields to increase content flexibility. We fine-tuned the fields after running local **usability tests.**_
+
+These interviews were conducted mostly over **slack** conversations, since we were a distributed company across the United States. I also studied their reactions during Zoom meetings as they walked through the process of adding/editing/deleting content. I learned frustrations and goals. Eight (8) stakeholders participated in adding/editing/deleting content to test the admin UI's usability. The team learned the results of **unmoderated usability tests** during daily scrum sessions. This helped with iterative changes to the initial build.
+
+The goal was to understand:
+* Is this component usable?
+* How easy/difficult is it to add or change content?
+* Do we need to add another field to this component?
+* Are we getting the right data from this component to React?
+
+### 2. Empathize
+
+_Listening to content managers during standups and reading their feedback in slack discussions, I understood the need for flexibility in every component we would build for the two personas._
+
+Only internal stakeholders (TAG employees) would see the content management user interface via a separate URL. But their roles and needs varied. To understand and empathize with each user, I created a matrix of users based on their login permissions.
 
 |Role|Needs|
 |----|----|
@@ -44,103 +85,83 @@ Only internal stakeholders (TAG employees) would see the content management user
 |Visual designer|curate all images and background colors|
 |Hiring managers|Update available roles and their descriptions|
 |Frontend developer|Render dynamic content exactly as the designs|
-|Backend develoer|Connect Drupal fields to React components|
+|Backend developer|Connect Drupal fields to React components|
 
-Using this matrix, I could narrow down users to two personas: Andrew (Project Manager) and Maxine (Developer) (see above for images).
+Once I learned the behavior of each user in the matrix and listened to their goals and frustrations with the user interface, it was easier to create accurate **user personas**. I narrowed them down to two: Andrew (Project Manager) and Maxine (Developer).
 
-# Roles & Responsibilities
-_headline:Remote Frontend developer and usability tester on TAG's engineering team. New to React and Gatsby._
+> "I love that you added the color picker to the header component. It'll be easy to choose a background color that goes with the artwork." -- Andrew
 
-I was the Senior Frontend Developer at TAG. I was asked to jump onto this project in early July 2019. I joined after most of the architecture had already been built. The previous frontend developer did great job using [Emotion](https://emotion.sh/docs/introduction) to create a basic design system.
-
-> Frontend developers [make great uxers(blog/why-frontend-devs-make-great-uxers)]. They conduct a lot of user research without even realizing it.
-
-I focused on building the remaining React components and styling them according to the latest designs. I worked in tandem with our React Developer, a Drupal Architect and a Drupal developer.
-
-# Scope & Constraints
-The rebranded site had to launch within 6 weeks. Since our name was on the line, it had to look flawless.
-
-Proper user experience research methods, wireframes and prototypes were not scoped. It had to look great on mobile, IE11, Edge and every modern browser.
-
-I was handed final desktop and mobile designs in Invision, which had changed considerably since the site architecture began. I had to work quickly to understand the new designs, build the new components and style them to pixel perfection.
-
-Meanwhile, I had limited knowledge of React, Gatsby and [Netlify](https://www.netlify.com/). Fortunately, I was eager to learn and had a great React mentor already on the team.
-
-# Process
-
-Tools <i class="far fa-tools"></i> Invision, Sketch, ReactJS, Gatsby, CSS, Emotion, GraphQL, CBT.
-
-### 1. Empathize
-
-_Listening to content managers during standups and reading their feedback in slack discussions, I understood the need for flexibility in every component we would build for the two personas._
-
-As a developer, I was used to following a component-driven strategy for coding standards, and encouraged this as a best practice for the developers.  It was easy to follow this methodology building React components, since existing files were already organized this way.
-
-However, there was another benefit for stakeholders. Clearly named components would allow content managers to quickly add content to different pages. If we could keep the components consistent across page layouts, we could build a seamless experience for the content managers. We wanted to create as few components as possible to not overwhelm the user, while still giving the content manager flexibility.
-
-### 2. Research
-
-_**Interviews** with internal stakeholders revealed that we needed to 1) create two new components and 2) enhance existing components with new fields to increase content flexibility. We fine-tuned the fields after running local **usability tests.**_
-
+> "He wants to change just this page's title width? Are you kidding me? Does the designer even know this is used sitewide?" -- Maxine
 
 ### 3. Design
 
-_Identified reusable components from the Invision designs and worked with the visual designer to resolve discrepancies._
+_Because of project constraints, I had to work backward from the typical UX process. I identified reusable components from the Invision designs, worked with the visual designer to resolve discrepancies, and created wireframes for future improvements._
 
-Visual designers often create designs as entire pages. Developers (should) break up those designs into modular puzzle pieces that can be reused throughout an application, perhaps in a different order or a different layout.
+The point of user experience is to identify user needs, user flow and interactions LONG BEFORE the project reaches a visual designer or developer. Unfortunately, this project did not start with user experience in mind. However, it's never too late to apply UX methods for future improvements.
 
-> Related article: (Designing for Devs blog series)
+Visual designers often create their designs as entire pages. Developers, in turn, break up those designs into modular puzzle pieces that can be reused throughout an application, perhaps in a different order or a different layout. We call these modules or components.
 
-After studying the new designs, I came up with the new components we should build and fields to add to make existing components more flexible. One of those components was the Header.
+What I encourage designers to do is design components. Since most of the architecture had already been built, I studied the new designs to see which components we already had and which ones we still needed to match the design. I answered the following questions reviewing the designs:
 
-![Thirdandgrove.com header component on a partner page](/assets/images/projects/tag-header-partner-gatsby.png)
-![Thirdandgrove.com header component on a case study page](/assets/images/projects/tag-header-work.png)
-![Thirdandgrove.com header component on a blog page](/assets/images/projects/tag-header-blog.png)
-![Thirdandgrove.com header component on blog landing page](/assets/images/projects/tag-header-blog-landing.png)
+* Who were the users?
+* What were their frustrations and goals using the current content management interface?
+* How could we improve the interface to meet user needs?
+* How do we reflect these new components in the interface?
 
-Header - One header component used across different page templates. Should be agnostic of which page it’s on.
+After studying the new designs, I came up with 1) two new components we should build and 2) new fields to add flexibility to existing components. One of those components was the Header.
+[slider of different header images]
+[caption: One header component used across different page templates.]
 
-There were some discrepancies which needed addressing. Ability to choose a background color, enter title, label = date and author for blogs, custom for other pages, option to hide label on mobile.
+Based on the new designs. We needed to address the ability to:
+* choose a background color
+* enter header title
+* upload a header image
+* add a label above the title
 
-Discrepancies - For example, the title text width smaller breaking into three lines on some pages than others. Needed to add this adjustment to user interface. Not all changes were added to interface because of project scope. [See full proposed UI]
+Behind the scenes: the label would default to a date and author for blog pages, while it displayed custom text for other pages. We also needed an option to hide the label on mobile. One more caveat - the header had to be agnostic of its page content. This meant the same header interface would be used to create content at the top of the homepage, a blog page, a work page, a landing page and an informational page (about, legal, etc.)
 
-Other components: Text, Image, Quote, Insights Carousel, etc.
+I came up with wireframes for the interface that would address all of these user needs.
+
+![Screenshot of header balsamiq mocks]
 
 ### 4. Implement
 
-_We changed the site architecture to add the new fields and components in the Drupal user interface, connect them to React via GraphQL queries(?), and styled as Emotion thingies._
+_We changed the site architecture to add the new fields to the Drupal user interface, load them into React components, and style them according to our designs._
 
-Because of limited scope, only the following were implemented into the drupal user interface for the site launch:
-Header
-Text - WYSIWYG. Mobile settings and desktop settings - padding, margins, text sizes  [screenshot of code and UI].
-Image - [screenshot of code and UI]
-Insights carousel - add options for background color and title [screenshots of frontend]
-Work Slider -
+Clearly-named components allows content managers to quickly add content to different pages. If we could keep the components consistent, even across different page layouts, we could achieve a seamless experience for the content managers. We wanted to create as few components as possible to avoid overwhelming the user, while still giving the content manager flexibility.
 
-The rest settings were left in code. I did wireframes for a future iteration of TAG. See pdf.
+At the same time, each component had to collect the _precise_ information the developers needed. Since we wanted to limit the number of components, we could capture as much data as possible by adding more fields to a component.
 
-Use drupal fields to set content values. Gatsby ingest content.
-Relate new components and fields to backend developers (both drupal and react devs) to build out user interface in drupal. This works by matching content types in Drupal to React components.
-Work with react developers to connect the UI components to in React.
-Style components for responsive layouts (mobile, tablet and desktop breakpoints[]). Collaborate with frontend devs. New way of styling for me. CSS-in-JS with Emotion. Use JS maps and arrays and vars as much as possible. Commit to Github.
+We set out to work. I notified the backend developers of the component changes we needed. They matched content types in Drupal to their relative React components. I wrote code to read and style the new field values. For example, in the header component, the developers added and configured the Drupal [color field module](https://www.drupal.org/project/color_field). This new field allows a user to pick a color, which is converted to a hexadecimal value. Once saved, my code in the ReactJS component reads the new field, recognizes the user's input and sets the header element background-color to the hexadecimal code. From the user's standpoint, this simple interaction was quick, adds flexibility and requires no knowledge of code.
+
+![gif of color picture in action]
+
+Unfortunately, because of scope, I had to leave other component settings in code instead of adding them to the user interface.
+![Screenshot of customized label text]
+![Screenshot of hide on mobile]
+
+Other components included Text, Image, Quotes, Image Slider.
+![Show the actual images next to balsamiq mockups]
 
 ### 5. Test & Repeat.
-_headline_
-Test values. Create new pages.
-Use GraphQL UI to validate data.
-Test layout in CBT.
-Launch live.
+_Since we had constant feedback from content managers and developers testing the admin interface, we had an iterative process for daily builds._
+
+As content managers created new pages, mixing and matching components on each page, we received constant feedback over slack and in our daily scrum meetings. The project manager turned these into JIRA tickets assigned to myself or one of the other developers to fix.
+
+We used GraphQL UI to validate our data from the Drupal database. This made sure that the correct values were indeed loaded into each React component.
+
+I used CrossBrowserTesting to manually test pages in Chrome, Firefox, Safari, Edge, Android, and iPhone devices.
+
+As we fixed issues, we sent them to the Quality Assurance team for further testing.
+
 
 # Results & Lessons Learned
-_The rebranded thirdandgrove.com launched on August 21, 2019._
-[Other stuff from website].
+_The rebranded thirdandgrove.com launched on August 30, 2019 boasting lightning fast performance _
 
-Done different: Utilize Drupal’s own responsive image handling instead of relying on Gatsby. Time suck for learning curve. Reinventing the wheel.
-Brought more accessibility awareness to the forefront.
-Need to convince project managers and designers to see project tasks as components, not pages.
-AirBNB way of styling React components.
-Accessibility concerns addressed as an afterthought. Background colors not A11y compliant and no arrows on slideshows, confusing drag capability on desktop, designer won argument.
-My time was up with company, so my proposed changes for future iterations were not implemented (see section).
-Preview not working yet. Would have been great. Disabled when I left.
-Only had time to put into drupal header options.
-Use Media module to manage media assets instead of image upload.
+> This rebrand/replatform is a big leap forward for our brand, marking a milestone in who we want to be as a company.  -- Grant Glidewell, React Developer
+
+As mentioned before, user experience methodology was not a priority for this website. The frontend and administrative interface could have been extensively improved _before_ the designs. How? Through user research and experience design. I would have loved to have worked with the internal stakeholders to review my wireframes and build some awesome prototypes before we ever touched code. This way, developers could have been included earlier in the life cycle. I was hoping to build a React admin theme contributed back to the Drupal-Gatsby community.
+
+I also would have liked to see the [Drupal with Gatsby Preview](https://www.gatsbyjs.org/blog/2019-06-26-live-preview-for-drupal/) in production. However, it was turned off at the time of launch because of performance issues with Netlify.
+
+Although my time with Third and Grove ended shortly after the launch, I was ecstatic to learn ReactJS. I also gained more experience wireframing ideas in Balsamiq. I realized that user-centered design is critical to me. Now I'm even more determined to fight for the user in future projects.
