@@ -44,7 +44,7 @@
 
 /*google-font*/
 
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700');
+@import url('https://fonts.googleapis.com/css?family=?family=Playfair+Display:400,400i&display=swap');
 
 /*----------------------------------------*/
 
@@ -312,30 +312,34 @@ small {
 blockquote {
   border-left: 0 none;
   font-family: $title-font;
-  margin: 10px 0;
-  padding-left: 76px;
+  margin: 4em;
   position: relative;
+  border-top: 1px solid $link-color;
+  border-bottom: 1px solid $link-color;
+  padding: 2em 6em;
 }
 
 blockquote::before {
-  color: $dark-color;
+  color: rgba($dark-color, .25);
   content: "\f10d";
   font-family: "Font Awesome 5 Pro";
   font-weight: 900;
   font-size: 50px;
   position: absolute;
-  top: 20px;
+  top: 60px;
   left: 20px;
   line-height: 0;
   margin: 0;
   opacity: 0.3;
 }
 
-blockquote p {
+.sbpa-content blockquote p,
+%blockquote-text {
+  font-family: $title-font;
   font-style: italic;
   padding: 0;
+  margin: 0;
   line-height: 36px;
-  font-family: inherit;
 }
 
 blockquote cite {
@@ -560,6 +564,9 @@ dd {
   &:hover {
     background: $link-color;
     color: $dark-color;
+  }
+  p>& {
+    margin-top: 30px;
   }
 }
 
@@ -1103,8 +1110,15 @@ header {
   padding: 140px 0 110px;
 }
 
+.sbpa-content .testimonial-area {
+  padding: 40px 0;
+  .title {
+    display: none;
+  }
+}
+
 .single-testimonial {
-  padding: 30px 40px 50px;
+  padding: 30px 40px 15px;
   border: 1px solid $link-color;
   @include border-radius(5px);
   position: relative;
@@ -1112,7 +1126,7 @@ header {
     content: "\f10e";
     font-family: "Font Awesome 5 Pro";
     font-weight: 900;
-    color: $bg-color;
+    color: rgba($dark-color, 0.1);
     font-size: 40px;
     line-height: 42px;
     position: absolute;
@@ -1132,23 +1146,22 @@ header {
     }
     .info-right {
       overflow: hidden;
-      padding: 0 0 0 20px;
+      padding: 0;
       .name {
-        margin: 0 0 6px;
+        margin: 0;
       }
       .desg {
-        color: $link-color;
+        color: $dark-color;
         font-size: 12px;
         line-height: 16px;
         font-weight: 500;
+        padding: 0;
+        margin: 0;
       }
     }
   }
   .text {
-    font-size: 18px;
-    line-height: 29px;
-    font-weight: 500;
-    font-style: italic;
+    @extend %blockquote-text;
   }
 }
 
@@ -1538,11 +1551,6 @@ footer {
       letter-spacing: 0;
     }
   }
-  h3 {
-    border: 1px solid $light-color;
-    padding: 1em;
-    border-radius: 5px;
-  }
   h3+p {
     margin-top: 40px;
   }
@@ -1567,6 +1575,16 @@ footer {
   h3~p,
   h3~ol {
     padding: 0 4em;
+  }
+  p+ul {
+    line-height: 30px;
+    font-size: 20px;
+    border-left: 2px solid rgba($dark-color, .10);
+    margin-bottom: 50px;
+  }
+  p+ul>li {
+    line-height: inherit;
+    margin-bottom: 10px;
   }
 }
 
