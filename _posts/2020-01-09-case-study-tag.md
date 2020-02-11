@@ -9,7 +9,7 @@ category: [Case Study]
 ---
 Third and Grove is a 100% distributed digital agency with employees across the United States.  Keep reading to understand how we accomplished a complete rebrand with their favorite backend and a modern frontend.
 
-# Overview
+## Overview
 _Third and Grove chose to build their rebranded site on a [headless](https://dri.es/how-to-decouple-drupal-in-2019) Drupal 8 platform, using the static site generator Gatsby behind the scenes, combining the best of both familiar and the latest technology._
 
 Third and Grove's mission is to be "the most innovative agency in the world through modern digital design, awesome engineering, and building solutions for our clients as if we were building them for ourselves."
@@ -18,7 +18,7 @@ Third and Grove's mission is to be "the most innovative agency in the world thro
 
 So when they decided to rebrand in the summer of 2019, they had no doubt they would use the technologies they were already good at. But they also wanted showcase their ability to master cutting-edge tech. Being a Drupal shop, they would use Drupal to manage their rebranded content. But instead of Drupal's traditional templating layer system, they decided to use Gatsby - the free and open-source ReactJS framework for generating lightning-fast, progressive web apps.
 
-# Problem Statement
+## Problem Statement
 
 _Internal stakeholders needed an easy and quick user interface to add and edit site content. Developers needed to route the content to Gatsby for rendering._
 
@@ -26,7 +26,7 @@ _Internal stakeholders needed an easy and quick user interface to add and edit s
 
 Gatsby loads only the critical HTML, CSS, data, and JavaScript so your site loads as fast as possible. Once loaded, Gatsby prefetches resources for other pages so clicking around the site feels incredibly fast. In our case, those resources mostly came from Drupal content. But what would the user interface look like to capture content? How do you build an interface that works for everyone? Here come UX principles to the rescue.
 
-# Users & Audience
+## Users & Audience
 _Only internal stakeholders would see the content management UI. After reviewing user needs, two main personas became clear._
 
 ##### Andrew #####
@@ -36,7 +36,7 @@ _Only internal stakeholders would see the content management UI. After reviewing
 ![Thirdandgrove.com User Personas](/assets/images/projects/tag-persona-maxine.png)
 
 
-# Roles & Responsibilities
+## Roles & Responsibilities
 _Remote Frontend developer and usability tester on TAG's engineering team. New to React and Gatsby._
 
 I was the Senior Frontend Developer at TAG. I was asked to jump onto this project in early July 2019. I joined after most of the architecture had already been built. The previous frontend developer did great job using [Emotion](https://emotion.sh/docs/introduction) to create a basic design system.
@@ -45,7 +45,7 @@ I was the Senior Frontend Developer at TAG. I was asked to jump onto this projec
 
 I focused on building the remaining React components and styling them according to the latest designs. I worked in tandem with our React Developer, a Drupal Architect and a Drupal developer.
 
-# Scope & Constraints
+## Scope & Constraints
 _The rebranded site had to launch within 6 weeks. Since our name was on the line, it had to look flawless. It had to look great on mobile, IE11, Edge and every modern browser. Proper user experience research methods, wireframes and prototypes were not scoped into the project. I did them on my own._
 
 [This project worked backward from a normal UX project.]
@@ -54,7 +54,7 @@ I was handed final desktop and mobile designs in Invision, which had changed con
 
 Meanwhile, I had limited knowledge of React, Gatsby and [Netlify](https://www.netlify.com/). Fortunately, I was eager to learn and had a great React mentor already on the team.
 
-# Process
+## Process
 
 Tools <i class="far fa-tools"></i> Invision, Sketch, ReactJS, Gatsby, CSS, Emotion, GraphQL, CBT.
 
@@ -155,7 +155,7 @@ I used CrossBrowserTesting to manually test pages in Chrome, Firefox, Safari, Ed
 As we fixed issues, we sent them to the Quality Assurance team for further testing.
 
 
-# Results & Lessons Learned
+## Results & Lessons Learned
 _The rebranded thirdandgrove.com launched on August 30, 2019 boasting lightning fast performance _
 
 > This rebrand/replatform is a big leap forward for our brand, marking a milestone in who we want to be as a company.  -- Grant Glidewell, React Developer
