@@ -3,8 +3,9 @@ layout: post
 title:  "Case Study - Mint Creative Co."
 date:   2019-12-14 00:26:01 -0500
 description: "Solutions Architecture for an Atlanta pet photography/design company."
-background: "https://picsum.photos/id/237/1600/700"
-thumbnail: "https://picsum.photos/id/237/350/250"
+background: "/assets/images/headers/sankhadeep-barman-Yy_fp2GzPco-unsplash.jpg"
+thumbnail: "/assets/images/headers/sankhadeep-barman-Yy_fp2GzPco-unsplash.jpg"
+photo_atty: "Photo by Sankhadeep Barman on Unsplash"
 tags: [research, prototypes]
 category: [Case Study]
 ---
