@@ -1866,6 +1866,10 @@ footer {
   padding: 200px 0 100px;
   background-size: cover;
   background-position: center;
+  &::before {
+    @include headerGradient($light-color,
+    200deg);
+  }
 }
 
 .landing-page-area {

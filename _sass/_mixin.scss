@@ -55,7 +55,7 @@
 }
 
 @mixin headerGradient($primaryColor, $degree) {
-  background-image: linear-gradient($degree, rgba($primaryColor, .5) 0, transparent);
+  background-image: linear-gradient($degree, rgba($primaryColor, 1) 0, transparent);
   content: "";
   display: block;
   position: absolute;
