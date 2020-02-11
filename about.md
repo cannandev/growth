@@ -12,13 +12,13 @@ I'm Claire Annan, otherwise known as **@cannandev** on the interwebs. I'm a UX/U
 ## What companies have you worked for?
 I've worked for a wide range of companies. Fortune 500 to small digital agencies. B2C, B2B. Financial industry to entertainment.
 
-{%include sections/clients.html %}
+![List of clients](/assets/images/logos/logos.png)
 
 Now, as a consultant, my clients are local businesses that want to create a product. They are willing to invest in user-centered research before any interactive design or code begins.
 
 
 ## Are you still a developer?
-I still code; I'm just focused on the other end of the SDLC (software development life cycle). I use my development skills to build prototypes and optimize performance. I was a software developer for 20 years, both backend and frontend.
+I still code; I'm just focused on the other end of the software development life cycle. I use my development skills to build prototypes and optimize performance. I was a software developer for 20 years, both backend and frontend.
 
 I grew tired of receiving designs that were just "thrown over the fence" from a designer to a developer. I had to quickly build features that had not been tested by the user until they went live. To me, that's just too late.
 
