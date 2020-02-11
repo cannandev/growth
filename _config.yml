@@ -34,10 +34,16 @@ plugins:
 
 # Link formats
 permalink: /blog/:title
+permalink: /work/:title
 
 # Sass settings
 sass:
     sass_dir: _sass
+
+# Collections
+collections:
+  work:
+    output: true
 
 # Exclude from processing.
 # The following items will not be processed, by default.

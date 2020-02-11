@@ -1,0 +1,42 @@
+{% include header.html %}
+<section class="landing-hero-area" style="background-image: url('{{ page.background }}')">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-9 offset-lg-1 col-12">
+        <div class="innerpage-hero-content">
+          <h1 class="title">{{ page.title }}</h1>
+          <p class="text">{{ page.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="page-landing-area">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="page-all-landing">
+          <div class="row">
+            {% for project in site.work %}
+            <div class="col-lg-4 col-sm-6 col-12">
+              <div class="single-related-article">
+                <div class="img">
+                  <a href="{{ project.url }}">
+                    <img src="{{ project.thumbnail }}" alt="{{ project.title }}">
+                  </a>
+                </div>
+                <div class="content">
+                  <p class="date">{{ project.date | date: "%b %d, %Y" }}</p>
+                  <h4 class="title">{{ project.title }}</h4>
+                  <p class="text">{{ project.excerpt }}</p>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% include footer.html %}

@@ -7,7 +7,7 @@ photo_atty: "Photo by Michael Emono on Unsplash"
 tags: [ui, ia]
 category: [Case Study]
 ---
-Third and Grove is a 100% distributed digital agency with employees across the United States.  Keep reading to understand how we accomplished a complete rebrand with their favorite backend and a modern frontend.
+Third and Grove is a 100% distributed digital agency with employees across the United States.  Keep reading to understand how we accomplished a complete rebrand with our favorite backend and a modern frontend.
 
 ## Overview
 _Third and Grove chose to build their rebranded site on a [headless](https://dri.es/how-to-decouple-drupal-in-2019) Drupal 8 platform, using the static site generator Gatsby behind the scenes, combining the best of both familiar and the latest technology._
@@ -156,7 +156,7 @@ As we fixed issues, we sent them to the Quality Assurance team for further testi
 
 
 ## Results & Lessons Learned
-_The rebranded thirdandgrove.com launched on August 30, 2019 boasting lightning fast performance _
+_The rebranded thirdandgrove.com launched on August 30, 2019, boasting lightning-fast performance _
 
 > This rebrand/replatform is a big leap forward for our brand, marking a milestone in who we want to be as a company.  -- Grant Glidewell, React Developer
 

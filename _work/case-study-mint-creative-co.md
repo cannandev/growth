@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Case Study - Mint Creative Co."
+title:  "Case Study: Building a useful photo app for Mint Creative Co."
 date:   2019-12-14 00:26:01 -0500
 description: "Solutions Architecture for an Atlanta pet photography/design company."
 background: "/assets/images/headers/sankhadeep-barman-Yy_fp2GzPco-unsplash.jpg"
@@ -9,6 +9,7 @@ photo_atty: "Photo by Sankhadeep Barman on Unsplash"
 tags: [research, prototypes]
 category: [Case Study]
 ---
+MINT Creative Co is an Atlanta pet photography/portrait studio that also creates content for pet-friendly brands. We are building an app that will empower clients to take professional photos. Keep reading to understand the user-centered process.
 
 ## Overview
 **Built a clickable mobile app prototype called PawfectPic&trade; for [MINT Creative Co](mintcreativeco.com), a pet photography/design studio with over 1200 Instagram followers. Prioritized providing an easy and informative interface for social media influencers.**
@@ -95,6 +96,6 @@ From the initial round of testing, I came to the following conclusions regarding
 1. **The camera roll should navigate to the user's actual camera roll and not just photos captured with the app.** This was different from the competitor apps, which all showed photos taken from the app instead of the native camera roll.
 1. **It was unclear how to export images to MINT, IG, etc from the app.** Most users are used to selecting images from their native camera roll and then sharing them on their social media platform of choice. Giving credit (using @mention) to MINT was not a priority.
 
-I plan to conduct another round of usability testing at the next MINT event. It is the ideal place to reach members of the four key user groups.
+I plan to conduct another round of usability testing at the next MINT portrait event. It is the ideal place to reach members of the four key user groups.
 
 I learned a great deal from the stakeholder about 1) crafting a niche for yourself in a flooded market and 2) moving with the ebbs and flows of your market. Millennials are keenly aware of new opportunities presented by social media, the need to connect with their audience, and being a serial entrepreneur.

@@ -1,7 +1,7 @@
 ---
-layout: landing
-title: Blog Page
+layout: blog-landing
+title: Blog & Stories
 background: "/assets/images/headers/joanna-kosinska-1_CMoFsPfso-unsplash.jpg"
-description: "Si quidem, inquit, tollerem, sed relinquo. Primum in nostrane potestate est, quid meminerimus? Quae duo sunt, unum facit. Sint modo partes vitae beatae."
+description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem reprehenderit distinctio hic ab facere impedit possimus quidem! Reprehenderit distinctio hic ab facere impedit possimus quidem."
 permalink: /blog/
 ---
