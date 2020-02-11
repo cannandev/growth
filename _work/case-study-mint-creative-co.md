@@ -2,7 +2,6 @@
 layout: post
 title:  "Case Study: Building a useful photo app for Mint Creative Co."
 date:   2019-12-14 00:26:01 -0500
-description: "Solutions Architecture for an Atlanta pet photography/design company."
 background: "/assets/images/headers/sankhadeep-barman-Yy_fp2GzPco-unsplash.jpg"
 thumbnail: "/assets/images/headers/sankhadeep-barman-Yy_fp2GzPco-unsplash.jpg"
 photo_atty: "Photo by Sankhadeep Barman on Unsplash"
