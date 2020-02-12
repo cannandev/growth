@@ -7,7 +7,7 @@ permalink: /about/
 ---
 
 ## So, tell me about yourself.
-I'm Claire Annan, otherwise known as **@cannandev** on the interwebs. I'm a UX/UI consultant specializing in user research and experience design. I have a strong background in software development. My top UX skills are **interviewing, usability testing, wireframes, prototypes, and design systems**. I love helping others, removing technical obstacles that stand in their way. I get excited about open source technology, especially content management systems used to give back to the community. In my next role, I would like to work with a distributed team that **builds genuinely user-centered applications**.
+I'm Claire Annan, otherwise known as **@cannandev** on the interwebs. I'm an Atlanta-based UX/UI consultant specializing in user research and experience design. I have a strong background in software development. My top UX skills are **interviewing, usability testing, wireframes, prototypes, and design systems**. I love helping others, removing technical obstacles that stand in their way. I get excited about open source technology, especially content management systems used to give back to the community. In my next role, I would like to work with a distributed team that **builds genuinely user-centered applications**.
 
 ## What companies have you worked for?
 I've worked for a wide range of companies. Fortune 500 to small digital agencies. B2C, B2B. Financial industry to entertainment.
