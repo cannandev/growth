@@ -18,3 +18,4 @@ vendor/cache/
 vendor/gems/
 vendor/ruby/
 assets/images/**/.DS_Store
+assets/images/headers/.DS_Store
