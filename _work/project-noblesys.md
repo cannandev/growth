@@ -15,3 +15,6 @@ Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum dolor nesciunt n
 Rebuilt noblesystems.com with a brand new design and custom Wordpress theme. Architected flexible content modules with Advanced Custom Fields API, PHP and jQuery. Wrote theme layout using Foundation XY Grid framework.
 
 Under the direction of Narwhal Digital.
+
+## References
+* [noblesystems.com](http://noblesystems.com)

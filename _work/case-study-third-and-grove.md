@@ -1,9 +1,9 @@
 ---
 layout: post
 title:  "Case Study: Building a Drupal UI for Third & Grove Decoupled Gatsby Site"
-background: "/assets/images/headers/michael-emono-oGPOVUbrW8Y-unsplash.jpg"
-thumbnail: "/assets/images/headers/michael-emono-oGPOVUbrW8Y-unsplas-thumb.jpg"
-photo_atty: "Photo by Michael Emono on Unsplash"
+background: "/assets/images/headers/austin-distel-svDX-GYdmRE-unsplash.jpg"
+thumbnail: "/assets/images/headers/austin-distel-svDX-GYdmRE-unsplash-thumb.jpg"
+photo_atty: "Photo by Austin Distel on Unsplash"
 tags: [ui, ia]
 category: [Case Study]
 ---

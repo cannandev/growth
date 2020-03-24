@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Case Study: Creating a Safer User Interface for Allconnect.com Redesign"
+title:  "Creating a Safer User Interface for Allconnect.com Redesign"
 background: "/assets/images/headers/michael-emono-oGPOVUbrW8Y-unsplash.jpg"
 thumbnail: "/assets/images/projects/allconnect/port-allconnect-thumb.jpg"
 photo_atty: "Photo by Michael Emono on Unsplash"
@@ -8,63 +8,44 @@ tags: [ui, ia, drupal]
 category: [Information Architecture]
 ---
 
-Allconnect is a free resource that simplifies how you shop for home services. Learn how the UX team built redesigned their website and innovated a new platform to make content updates easy and safe!
+Allconnect is a free resource that simplifies how you shop for home services. Learn how the UX team redesigned this website and innovated a new platform to make content updates easy and safe!
 
 ## Overview
 Allconnect is a **free tool for home service shopping**. They provide plans in your area, connecting you and millions of others to the **best deals** on internet, TV, home security, electricity and more. Allconnect offers customers a convenient single source to compare and connect integrated media, broadband, home protection, energy and green products. Allconnect’s services are available at allconnect.com, through utility and energy companies representing over 50 million households, and via affiliates.
 
 > At Allconnect®, we’re all about connecting you and millions of others to the best deals on internet, TV, home security, electricity and more.<cite>Allconnect.com</cite>
 
-Allconnect wanted to rebrand their website using UX methods. It was also an opportunity to upgrade their content management software for their "behind the scenes users" &mdash; the content administrators.
+Allconnect wanted to rebrand their website using UX methods. It was also an opportunity to upgrade their content management software for their "behind the scenes" users &mdash; content administrators.
 
-## Problem Statement
-Success of allconnect.com was high ranking in SEO. **Need a safe and easy way of rendering SEO content**. Content managers should not need to know HTML or CSS or JavaScript. SEO/SEO managers needed an easier way to update content and keywords. A good CMS lets users be good at their job, not force to learn another.
+## The Challenge
+As Senior Web Developer, I focused on discovering the pain points of the existing content management system by interviewing the administrators.
 
-## Users & Audience
-The UX Director and UX Architect focused on the customers visiting the site; mainly movers in need of home services in their new home. As the software architect, I focused on the content managers, the "behind the scenes" users of the content managment system. This included two SEO managers, an SEM expert, and the entire marketing team.
+**Pain Point #1: Difficult to update content.** A great part of allconnect.com's success is its high ranking in search engines. Content managers needed an easy way of rendering SEO content. I sat with content admins and watched them painfully try to complete their daily tasks. The simple task of copying and pasting text from a Word document became a nightmare as they tried to find the appropriate location in a giant field of HTML code. One missing semi-colon or closing tag and _boom!_ the page failed to render.
 
-## Roles & Responsibilities
-As the Senior Web Developer & Drupal Architect, my goal was to make the administrative interface easy to use without knowledge of HTML, CSS or JavaScript. Learned UX methods from the Director and Architect. First time in a UX team took lead in Product Team. I worked closely with these two women, titans in technology.
+**Pain Point #2: Difficult to find content.** Once the user created content, finding that content page again was another nightmare. The Drupal content listing page was set up to display all pages in a table using pager navigation in the footer . Now, imagine a site with almost 1000 pages in alphabetical order. Administrators wanted a search feature** and a way to sort content by content type.
 
-Build and maintain functional web applications as a part of the first company User Experience Digital Team. Prioritized software development projects, setting timelines, identifying deliverables and assigning tasks to team members.
+**Pain Point #3: Security Risk.** Embedded in the sea of HTML was JavaScript code. This is particularly dangerous and goes against Drupal best practices. These scripts are saved to the Drupal database, leaving the page suceptible to web hacking techniques such as Cross Site Scripting and SQL injections. We had to provide a safe way to add content.
 
-Worked closely with the UX Architect and Visual Designer to implement new features onto allconnect.com as a result of testing. Looped into observing customer behavior during usability tests on usertesting.com, interviews, surveys and card sorts. Participated in paper prototype usability tests for content managers. Conducted interviews with content managers.
+> Particularly dangerous are `<script>` HTML tags. If somebody were to put a script tag into a field or form value somewhere, then they would have introduced external code to your site that would execute for thousands of users. <cite>Drupal.org</cite>
 
-## Scope & Constraints
-Year...number of months. Agile project. Daily scrum calls with development team. Easy to convince stakeholders (CEO, Marketing Director, Engineering Director)  how understanding our customers' behvior could lead to more site conversion. Needed to convince the stakeholders that why we needed to make major changes to the backend - the content management system behind the site. This was more than just a "facelift".
-Showed 1) time wasted and frustration of admins trying to enter content 2) site vulnerabilities.
+## The Solution
+The UX Director and UX Architect focused on the customers visiting the site; mainly movers in need of home services in their new home. As the Senior Web Developer & Drupal Architect, I focused on building an improved system for the content managers. This included two SEO managers, an SEM expert, and the entire marketing team.
 
-## Process
+> I know a little HTML, but I shouldn't have to in order to do my job! <cite>Allconnect.com SEO Strategist</cite>
 
-### Empathize
+My first priority was security. I upgraded the platform to the latest version of Drupal which included many security updates. I also scheduled regular version upgrades with the DevOps team. I made sure that our new PHP templates used drupal filters to sanitize user content.
 
-Through in person (name for this) **interviews, usability tests and paper prototypes**, determined the following pain-points:
-**Pain point 1) Difficult to update content.** Watched content admins copy and paste code into a giant body field. Observed them wading through a sea of code. One mispelled variable, one missing semi-colon - boom the whole page failed to render.
-Not to mention the security risk.
+![Allconnect.com homepage - header with admin page labels](/assets/images/projects/allconnect/port-allconnect-800.jpg)
 
-![Content management field before UX]
+Next, I focused on making the administrative interface easy to use without knowledge of HTML, CSS or JavaScript. After all, the point of a CMS is to make creating content easier. So we went through each page template and came up with form fields for content. Those fields would be wrapped around HTML and sanitized on the backend. The UX Architect helped me interview content managers, creating paper prototypes of the admin interface to identify which parts of the page needed content input.
 
-**Pain Point 2) Difficult to find content.** As if updating content on a page was not painful enough, finding that content again was another nightmare.
-![Content listing before UX]
+![Homepage behind the scenes - header admin page configuration](/assets/images/projects/allconnect/ac-drupal_-_product_landing_page_-_page_hero.png)
 
-**Pain Point 3) Security Risk.** Lorem ipsum.
-
-### Research
-UX architect used persona, research to develop sketches for frontend.
-![images of research]
-
-### Design
-Using new designs, sketched components, content types and fields to build in the new CMS.
-![Image of new design with side sketches]
-
-### Implement
-Build components in Drupal to match.
-![images of the backend fields that match frontend]
-
-### Test & Repeat
-Worked with audience members to test. An iterative process to make changes.
+In addition, on the administrative page index, I installed and configured some Drupal modules to allow an advanced page search. Users could drill down to a page by content type, date, author or title keywords.
 
 ## Results & Lessons Learned
-Content managers happy. Improved overall site conversion by 10% with 4x more online orders. Increased total customers by 27% and gross revenue by 40%. Learned user research methodologies such as A/B Tests with Google Optimize and Adobe Target.
+The new site platform launched in August 2017. The site changes resulted in improved overall site conversion by 10% with four times more online orders. Total customers increased by 27% and gross revenue by 40%. I learned user research methodologies such as **paper prototyping** and **A/B Tests** with **Google Optimize** and **Adobe Target**.
 
-Months later, company bought out. New stakeholders and a new focus. Drupal no longer a viable option for the type of marketing. I’ve moved on but to date one of the projects I’m most proud of. Listened to and watched the user and built a great product with them at the center - both the site visitors and the “behind the scenes” users.
+An important lesson I learned was Content Managers are users too! They should be interviewed and participate in usability testing to isolate which content requires user input. It makes the user feel like they have control over the look and feel of the page without knowing any code. It also makes the developer know the user input is secure and will not risk site resources.
+
+Months later, Allconnect was bought out by another company. The Drupal administrative interface was kept long after I left, but was eventually replaced with a different CMS. However, I'm immenseley proud of the platform we built. We used UX principles to champion often overlooked users.

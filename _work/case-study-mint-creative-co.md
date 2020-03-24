@@ -2,8 +2,8 @@
 layout: post
 title:  "Case Study: Building a useful photo app for Mint Creative Co."
 date:   2019-12-14 00:26:01 -0500
-background: "/assets/images/headers/sankhadeep-barman-Yy_fp2GzPco-unsplash.jpg"
-thumbnail: "/assets/images/headers/sankhadeep-barman-Yy_fp2GzPco-unsplash.jpg"
+background: "/assets/images/headers/mint-diamond-daphne.jpg"
+thumbnail: "/assets/images/headers/mint-diamond-daphne.jpg"
 photo_atty: "Photo by Sankhadeep Barman on Unsplash"
 tags: [research, prototypes]
 category: [Case Study]
