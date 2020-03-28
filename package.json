@@ -1,0 +1,30 @@
+{
+    "name": "cannandev",
+    "version": "3.0.0",
+    "description": "Portfolio website for cannandev",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "test": "start"
+    },
+    "repository": {
+        "type": "git",
+        "url": "cannandev"
+    },
+    "keywords": [
+        "cannandev",
+        "developer",
+        "portfolio"
+    ],
+    "author": "Claire Annan",
+    "license": "ISC",
+    "devDependencies": {
+        "gulp": "^4.0.2",
+        "gulp-concat": "^2.6.1",
+        "gulp-csso": "^4.0.1",
+        "gulp-sass": "^4.0.2"
+    },
+    "dependencies": {
+        "es5-ext": "^0.10.53"
+    }
+}

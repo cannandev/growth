@@ -1,0 +1,25 @@
+{% include header.html %}
+<section class="innerpage-hero-area" style="background-image: url('{{ page.background }}')">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-9 offset-lg-1 col-12">
+        <div class="innerpage-hero-content">
+          <h1 class="title">{{ page.title | capitalize }}</h1>
+          <span>{{ page.tags | join: ', ' }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="single-blog-post-area">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 offset-lg-1 col-12">
+        <div class="sbpa-content">
+          {{ content }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% include footer.html %}
