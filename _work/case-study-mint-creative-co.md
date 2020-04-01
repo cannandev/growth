@@ -8,19 +8,19 @@ photo_atty: "Photo by Sankhadeep Barman on Unsplash"
 tags: [research, prototypes]
 category: [Case Study]
 ---
-MINT Creative Co is an Atlanta pet photography/portrait studio that also creates content for pet-friendly brands. We are building an app that will empower clients to take professional photos. Keep reading to understand the user-centered process.
+MINT Creative Co is an Atlanta pet photography/portrait studio. Check out the user-centered way we're designing their app, empowering their clients to take professional photos.
 
 ## Overview
 **Built a clickable mobile app prototype called PawfectPic&trade; for [MINT Creative Co](mintcreativeco.com), a pet photography/design studio with over 1200 Instagram followers. Prioritized providing an easy and informative interface for social media influencers.**
 
-#Pawfect and #pawfectpic are popular hashtags on social media. They describe that one adorable photo of your favorite pet. But how do you get Fido to sit still and take a selfie? **MINT PawfectPic&trade; catches your pet's attention using your phone.** No expensive attachments. The app has three preset sounds: bark, squeaky toy, and kisses. It also has a flicker function using the phone’s native flash.
+#Pawfect and #pawfectpic are popular hashtags on social media. They describe that one adorable photo of your favorite pet. But how do you get Fido to sit still and take a selfie? **MINT PawfectPic&trade; will catch your pet's attention using your phone.** No expensive attachments. The app has three preset sounds: bark, squeaky toy, and kisses. It also has a flicker function using the phone’s native flash.
 
 ## Problem Statement
-**Need to take professional quality photos of pets for social media, without a professional photographer.**
+**Take professional quality social media photos of pets, without a professional photographer.**
 
-The stakeholder receives tons of images from clients and brand ambassadors to join her Pet Model Network on Instagram. She wants to eventually build a database of models for pet-friendly brands. At first, I thought the app could be a core method of uploading images to this database.
+The stakeholder receives tons of images from clients and brand ambassadors, creating a network of pet models on Instagram. Eventually, she wants to build a database of models for pet-friendly brands. At first, I thought the app would be a core method of uploading images to this database.
 
-However, as the project progressed, the stakeholder ramped down her involvement in her company to pursue other business ventures. Then came the iPhone 11 Pro. Foreseeing the increase of iPhoneography as opposed to professional photography, she needed a way to share tips and tricks with her clients. This would free up her time and energy. PawfectPic&trade; lets her clients take professional quality photos _on their phone_.
+However, as the project progressed, the stakeholder ramped down her involvement in her company to pursue other business ventures. Then came the iPhone 11 Pro. Foreseeing the increase of iPhoneography as opposed to professional photography, she wanted a way to share tips and tricks with her clients. This would free up her time and energy. PawfectPic&trade; lets her clients take professional quality photos using _their phone_.
 
 ## Users & Audience
 1. MINT Creative customers
@@ -49,15 +49,10 @@ The stakeholder provided sketches of her vision for the app:
 
 ### Research
 
-Conducted **competitor research** to develop **business requirements** and **user personas**.
+I conducted **competitor research** to develop **business requirements** and **user personas**.
 ![Initial client paper with summary of competitor research](/assets/images/projects/mint/client_paper.png)
 
-Links to competitor apps:
-[DogCam](https://apps.apple.com/us/app/dogcam-dog-selfie-camera/id1441245944),
-[PetSelfie](https://play.google.com/store/apps/developer?id=Pet+Selfie),
-and [Look Here](https://play.google.com/store/apps/details?id=camera1.themaestrochef.com.cameraappfordogs&showAllReviews=true).
-
-Conducted several rounds of **usability tests with clients and social media users**.
+I also conducted several rounds of **usability tests with clients and social media users**.
 Although the app design was relatively simple, I had specific questions in mind during testing.
 1. Will the user know they can record a video by holding the shutter button?
 1. Does the user know how to post their photo to social media from the app?
@@ -77,11 +72,9 @@ Then **Balsamiq** to create low fidelity **wireframes**.
 Built a **low-fi prototype with MarvelApp**. Exported Balsamiq screens as individual images and uploaded them to MarvelApp
 [![MarvelApp Prototype](/assets/images/projects/mint/marvelapp.png)](https://marvelapp.com/5gjd48h)
 
-Link to prototype: <https://marvelapp.com/5gjd48h>
-
 
 ### Content Strategy
-Based on my conversations with stakeholder on the new direction of her company and initial usability tests, I made the following changes to the **information architecture** and **navigation**:
+Based on my conversations with the stakeholder on the new direction of her company and initial usability tests, I made the following changes to the **information architecture** and **navigation**:
 * Remove detailed screens for social media
 * Remove export/post to MINT functionality for MVP release
 * Add screen for tips
@@ -95,6 +88,6 @@ From the initial round of testing, I came to the following conclusions regarding
 1. **The camera roll should navigate to the user's actual camera roll and not just photos captured with the app.** This was different from the competitor apps, which all showed photos taken from the app instead of the native camera roll.
 1. **It was unclear how to export images to MINT, IG, etc from the app.** Most users are used to selecting images from their native camera roll and then sharing them on their social media platform of choice. Giving credit (using @mention) to MINT was not a priority.
 
-I plan to conduct another round of usability testing at the next MINT portrait event. It is the ideal place to reach members of the four key user groups.
+I plan to conduct another round of usability testing at the next MINT portrait event. It is the ideal place to reach members of the four key user groups. Then I can create a final prototype in **Sketch**.
 
-I learned a great deal from the stakeholder about 1) crafting a niche for yourself in a flooded market and 2) moving with the ebbs and flows of your market. Millennials are keenly aware of new opportunities presented by social media, the need to connect with their audience, and being a serial entrepreneur.
+I learned a great deal from the stakeholder about 1) crafting a niche for yourself in a flooded market and 2) moving with the ebbs and flows of a market. Millennials are keenly aware of new opportunities presented by social media. They've understood the need to connect with their audience, and how to navigate serial entrepreneurship.
