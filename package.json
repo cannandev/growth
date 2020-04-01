@@ -25,6 +25,7 @@
         "gulp-sass": "^4.0.2"
     },
     "dependencies": {
-        "es5-ext": "^0.10.53"
+        "es5-ext": "^0.10.53",
+        "minimist": "^1.2.5"
     }
 }
