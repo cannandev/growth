@@ -1,13 +1,26 @@
 ---
 layout: post
 title:  "Why Frontend Developers Make Great UXers"
-background: "https://picsum.photos/id/1/1600/700"
-thumbnail: "https://picsum.photos/id/1/350/250"
-tags: [ux, ui, cms]
-category: [Case study]
+background: "/assets/images/headers/claire-back-head.jpg"
+thumbnail: "/assets/images/headers/claire-back-head.jpg"
+tags: [ux, frontend]
+category: [Content Management UX]
 ---
-As frontend developers we do a lot of UX research without labeling as such...
+As frontend developers, we do a lot of UX research without even knowing it. Here are some skills that help make a good transition.
 
-interviewing visual designers to understand what he had in mind when he created this mock, interview clients/stakeholders to understand what problem they’re trying to solve, usability test content management admins to see what they’re expecting once they click the update button. Read and understand sitemaps, user flows and wireframes. Request A/B tests and SEO results to understand which browsers versions and mobile devices we need to build for/test. Review quality assurance tests and see where we can improve accessibility and the user interface. Interview backend developers to see what data is available to frontend and how to access it. Most of these conversations on slack and emails.
+## Interviewing
+* Interview visual designers to understand interactions and expected behavior
+* Interview clients and users to understand what problem they’re trying to solve
+* Interview backend developers to see what data is available to frontend and how to access it.
 
-Read my blog articles from the series _Designing for Devs_
+## Prototyping
+* Research features and build prototypes to estimate how long it will take to code
+
+## Usability Testing
+* Frontend developers can conduct usability tests with users in development or sandbox environments. The results are quick feedback and faster code iterations.
+* Request A/B tests and SEO results to understand which browsers and mobile devices are used.
+* Review quality assurance test results to improve code and accessibility.
+
+Most of these conversations occur on Slack and emails instead of controlled UX labs. Nevertheless, the information gained is vital to creating a user-centered product.
+
+Include product developers as early as possible in the design thinking process. Make sure frontend developers have time to review wireframes long before they start to write code. They can provide insight into tasks often overlooked when forecasting design sprints.
