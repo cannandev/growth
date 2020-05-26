@@ -59,6 +59,9 @@ As a researcher, I can focus on listening to users, one-by-one, to build persona
 
 > [ISFJs] work well when they know what is expected of them. They often enjoy working alone and do best without distractions. Defenders have a hard time stopping until the job is done.<cite>[Personalitymax.com](https://personalitymax.com/personality-types/isfj-defender/)</cite>
 
+## How do you learn?
+I've always prefered a practical approach to learning. I don't learn theory very well; it's hard for my brain to conceptualize. I'm a hands-on learner, building real-life projects. This site is an example. I try to implement new technologies into this site. It's a playground for practice learning.
+
 ## What do you like to do outside of work?
 I am effective and knowledgeable in working with cultures worldwide gained from years of international travel. I've been to 20 countries and once went around the world in 30 days! I love helping people and giving back to the community through my <a href="http://www.jw.org">volunteer work</a>. In Atlanta, I'm very involved in the Brazilian community. Did I mention that I speak, read and write Portuguese in addition to English?
 
