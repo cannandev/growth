@@ -27,6 +27,6 @@
     "dependencies": {
         "es5-ext": "^0.10.53",
         "kind-of": "^6.0.3",
-        "minimist": "^1.2.5"
+        "minimist": "^1.2.6"
     }
 }
